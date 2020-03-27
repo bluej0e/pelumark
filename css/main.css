@@ -1,4 +1,15 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+/* VARIABLES */
+
+:root{
+  --pink:#F7CDDA;
+  --gray:#EFF1EF;
+  --hotpink:#F277A8;
+  --black:#121212;
+  --white:#E0E5EC;
+  --morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
+
+}
 
 html {
     color: #222;
@@ -370,4 +381,25 @@ nav a:hover {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+
+/* HERE STARTS CUSTOM CODE */
+section{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.cajaP{
+  background-color: var(--pink);
+}
+.cajaG{
+  background-color: var(--white);
+}
+
+.cajaP, .cajaG{
+  width:50%;
+  height: 100vh;
 }
