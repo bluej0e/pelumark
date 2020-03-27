@@ -392,6 +392,8 @@ nav a:hover {
 section{
   display: flex;
   flex-wrap: wrap;
+}
+button{
 
 }
 header{
@@ -406,6 +408,10 @@ header{
   align-items: center;
   padding:0 15%;
 }
+header p{
+  max-width: 500px;
+  font-weight: 200;
+}
 .cajaP{
   background-color: var(--pink);
 }
@@ -418,14 +424,22 @@ header{
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 75vh;
+  height: 100vh;
   /* padding:0 10vw; */
 }
 
 .cajaG img, .cajaP img{
-  height: 200px;
-  width: 200px;
+  height: auto;
+  width: 50%;
+  min-width: 300px;
+  min-height: 300px;
+  box-shadow: var(--morphshad);
+  border-radius: 25px;
 }
 .cajaG p, .cajaP p{
-margin:0 5vw;
+  margin:0 5vw;
+}
+
+.textbox{
+  padding: 1em;
 }
