@@ -86,13 +86,13 @@ body {
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 20px solid var(--black);
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: var(--black);
 }
 
 .title {
@@ -391,6 +391,22 @@ section{
   flex-wrap: wrap;
 
 }
+header{
+  height:100vh;
+  background-image: url(/img/header_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:0 15%;
+}
+.cajaG img, .cajaP img{
+  height: 200px;
+  width: 200px;
+}
 
 .cajaP{
   background-color: var(--pink);
@@ -398,8 +414,12 @@ section{
 .cajaG{
   background-color: var(--white);
 }
-
 .cajaP, .cajaG{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width:50%;
-  height: 100vh;
+  height: 75vh;
+
 }
