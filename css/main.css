@@ -1,5 +1,6 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 /* VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap');
 
 :root{
   --pink:#F7CDDA;
@@ -8,9 +9,11 @@
   --black:#121212;
   --white:#E0E5EC;
   --morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
-
 }
 
+*{
+  font-family: 'Montserrat', sans-serif;
+}
 html {
     color: #222;
     font-size: 1em;
@@ -403,11 +406,6 @@ header{
   align-items: center;
   padding:0 15%;
 }
-.cajaG img, .cajaP img{
-  height: 200px;
-  width: 200px;
-}
-
 .cajaP{
   background-color: var(--pink);
 }
@@ -419,7 +417,15 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:50%;
+  width: 50%;
   height: 75vh;
+  /* padding:0 10vw; */
+}
 
+.cajaG img, .cajaP img{
+  height: 200px;
+  width: 200px;
+}
+.cajaG p, .cajaP p{
+margin:0 5vw;
 }
