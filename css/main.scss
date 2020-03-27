@@ -22,7 +22,7 @@ $hotpink:#F277A8;
 $black:#121212;
 $white:#E0E5EC;
 $morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
-$box: 
+
 
 *{
   font: 16px/26px 'Montserrat', sans-serif;
@@ -146,6 +146,8 @@ section{
     display: flex;
     flex-wrap: wrap;
 }
+
+
 button{
     border-radius: 25px;
     background-color: $white;
@@ -181,7 +183,6 @@ header{
         font-weight: 200;
         text-align: center;
     }
-
 }
 .imagefiller{
     background-image: url(/img/image_two.jpg);
@@ -189,27 +190,25 @@ header{
     background-repeat: no-repeat;
     background-position: center right;
 }
-.cajaP{
-    background-color: $pink;
-}
-.cajaG{
-    background-color: $white;
-}
-.cajaP, .cajaG{
+
+.caja{
+   
+
     display: flex;
     position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-
+    text-align: center;
+    width: 100%;
+    background-color: $white;
 
     &:before {
         content: "";
         display: block;
         padding-bottom: 100%;
     }
-    .caja-inner{
+    &-inner{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -218,22 +217,42 @@ header{
         justify-content: center;
         align-items: center;
         img{
-            height: auto;
-            width: 50%;
-            min-width: 300px;
-            min-height: 300px;
+            height: 50%;
+            width: auto;
+            // min-width: 250px;
+            // min-height: 250px;
             // box-shadow: $morphshad;
             border-radius: 25px;
         }
         h3{
             font-size: 2em;
+            font-weight: 700;
             text-transform: uppercase;
         }  
         p{
             margin:0 5vw;
+            // font-size: 14px;
+            line-height:22px;
         }    
     }
+    &:nth-child(odd){
+        background-color:$pink;
+    }
+
+    @include desktop{
+        width:50%;
+        &:nth-child(1), &:nth-child(4), &:nth-child(5), &:nth-child(8), &:nth-child(9){
+            background-color: $pink;
+        }
+        &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7), &:nth-child(10){
+            background-color: $white;
+        }
+        p{
+            margin:0 3vw;
+        }
+    }
 }
+
 
 .textbox{
     padding: 1em;
