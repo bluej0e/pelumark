@@ -394,7 +394,17 @@ section{
   flex-wrap: wrap;
 }
 button{
-
+  border-radius: 25px;
+  background-color: var(--white);
+  box-shadow: var(--morphshad);
+  padding: 10px 30px;
+  border: none;
+  color: var(--hotpink);
+  transition: 0.16s ease-in-out;
+}
+button:hover{
+  transform: scale(1.2);
+  font-weight: 600;
 }
 header{
   height:100vh;
@@ -427,7 +437,12 @@ header p{
   height: 100vh;
   /* padding:0 10vw; */
 }
-
+.imagefiller{
+  background-image: url(/img/image_two.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
 .cajaG img, .cajaP img{
   height: auto;
   width: 50%;
@@ -435,6 +450,10 @@ header p{
   min-height: 300px;
   box-shadow: var(--morphshad);
   border-radius: 25px;
+}
+.cajaG h3, .cajaP h3{
+  font-size: 2em;
+  text-transform: uppercase;
 }
 .cajaG p, .cajaP p{
   margin:0 5vw;
