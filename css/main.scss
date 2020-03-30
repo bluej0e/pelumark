@@ -23,7 +23,7 @@ $hotpink:#F277A8;
 $black:#121212;
 $white:#E0E5EC;
 $morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
-
+$buttshad:0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
 
 *{
   font: 16px/26px 'Montserrat', sans-serif;
@@ -348,7 +348,7 @@ header{
         button{
             border-radius: 50px;
             background-color: $white;
-            box-shadow: $morphshad;
+            box-shadow: $buttshad;
             padding: 20px 60px;
             margin: 2em;
             border: none;
@@ -436,6 +436,8 @@ nav.goobutt{
     transition: -webkit-transform ease-out 200ms;
     transition: transform ease-out 200ms;
     transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+    box-shadow: $buttshad;
+
     }
 
     .goobutt-open {
