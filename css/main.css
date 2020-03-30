@@ -263,146 +263,25 @@ header p {
   padding: 1em;
 }
 
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-@media only screen and (min-width: 480px) {
-  /* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-  nav a {
-    float: left;
-    width: 27%;
-    margin: 0 1.7%;
-    padding: 25px 2%;
-    margin-bottom: 0;
-  }
-  nav li:first-child a {
-    margin-left: 0;
-  }
-  nav li:last-child a {
-    margin-right: 0;
-  }
-  /* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-  nav ul li {
-    display: inline;
-  }
-  .oldie nav a {
-    margin: 0 0.7%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  /* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-  .header-container,
-.main aside {
-    -webkit-box-shadow: 0 5px 10px #aaa;
-    -moz-box-shadow: 0 5px 10px #aaa;
-    box-shadow: 0 5px 10px #aaa;
-  }
-  /* ============
-    WIDE: Menu
-   ============ */
-  .title {
-    float: left;
-  }
-  nav {
-    float: right;
-    width: 38%;
-  }
-  /* ============
-    WIDE: Main
-   ============ */
-  .main article {
-    float: left;
-    width: 57%;
-  }
-  .main aside {
-    float: right;
-    width: 28%;
-  }
-}
-
-@media only screen and (min-width: 1140px) {
-  /* ===============
-    Maximal Width
-   =============== */
-  .wrapper {
-    width: 1026px;
-    /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-.hidden {
-  display: none !important;
-  visibility: hidden;
-}
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  *zoom: 1;
-}
-
 /* MAUTIC FORM STYLE */
 #contact {
   background-image: url(/img/form_bg.jpg);
   background-position: center bottom;
   background-size: cover;
-  height: 100vh;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   display: flex;
   position: relative;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 10vw;
+  padding: 5vw;
 }
 
 #contact h2 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 600;
   clear: both;
   margin: 30px auto;
@@ -426,104 +305,34 @@ header p {
   font-weight: 600;
 }
 
-.mauticform-error {
-  margin-bottom: 10px;
-  color: red;
+#contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.mauticform-message {
-  margin-bottom: 10px;
-  color: green;
-}
-
-.mauticform-row {
-  display: block;
-  margin-bottom: 20px;
-}
-
-.mauticform-label {
-  font-size: 1.1em;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.mauticform-row.mauticform-required .mauticform-label:after {
-  color: #e32;
-  content: " *";
-  display: inline;
-}
-
-.mauticform-helpmessage {
-  display: block;
-  font-size: 0.9em;
-  margin-bottom: 3px;
-}
-
-.mauticform-errormsg {
-  display: block;
-  color: red;
-  margin-top: 2px;
-}
-
-.mauticform-selectbox,
-.mauticform-input,
-.mauticform-textarea {
+#contact form input,
+#contact form textarea {
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
   width: 100%;
   padding: 0.5em 0.5em;
-  border: 1px solid #CCC;
-  background: #fff;
-  box-shadow: 0px 0px 0px #fff inset;
-  border-radius: 4px;
+  margin: 20px 0;
+  border: none;
+  background: #E0E5EC;
   box-sizing: border-box;
 }
 
-.mauticform-checkboxgrp-label {
-  font-weight: normal;
-}
-
-.mauticform-radiogrp-label {
-  font-weight: normal;
-}
-
-.mauticform-button-wrapper .mauticform-button.btn-default,
-.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
-  color: #5d6c7c;
-  background-color: #ffffff;
-  border-color: #dddddd;
-}
-
-.mauticform-button-wrapper .mauticform-button,
-.mauticform-pagebreak-wrapper .mauticform-pagebreak {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 600;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.3856;
-  border-radius: 3px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.mauticform-button-wrapper .mauticform-button.btn-default[disabled],
-.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] {
-  background-color: #ffffff;
-  border-color: #dddddd;
-  opacity: 0.75;
-  cursor: not-allowed;
-}
-
-.mauticform-pagebreak-wrapper .mauticform-button-wrapper {
-  display: inline;
+#contact form input::after,
+#contact form textarea::after {
+  content: "";
+  width: 100%;
+  background-color: #222;
+  stroke: 1px solid;
+  height: 1px;
 }
 
 /* ==========================================================================
@@ -577,4 +386,126 @@ h3 {
 h3 {
     page-break-after: avoid;
   }
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 480px) {
+  /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
+  nav a {
+    float: left;
+    width: 27%;
+    margin: 0 1.7%;
+    padding: 25px 2%;
+    margin-bottom: 0;
+  }
+  nav li:first-child a {
+    margin-left: 0;
+  }
+  nav li:last-child a {
+    margin-right: 0;
+  }
+  /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
+  nav ul li {
+    display: inline;
+  }
+  .oldie nav a {
+    margin: 0 0.7%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* ====================
+        WIDE: CSS3 Effects
+       ==================== */
+  .header-container,
+.main aside {
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+  }
+  /* ============
+        WIDE: Menu
+       ============ */
+  .title {
+    float: left;
+  }
+  nav {
+    float: right;
+    width: 38%;
+  }
+  /* ============
+        WIDE: Main
+       ============ */
+  .main article {
+    float: left;
+    width: 57%;
+  }
+  .main aside {
+    float: right;
+    width: 28%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  /* ===============
+        Maximal Width
+       =============== */
+  .wrapper {
+    width: 1026px;
+    /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+       Helper classes
+       ========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
 }
