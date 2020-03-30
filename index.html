@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="https://kit.fontawesome.com/4b977b2858.js" crossorigin="anonymous"></script>
+        <link href="https://calendly.com/assets/external/widget.css" rel="stylesheet" defer />
+        <script src="https://calendly.com/assets/external/widget.js" type="text/javascript" defer></script>
         <script type="text/javascript">
           /** This section is only needed once per page if manually copying **/
           if (typeof MauticSDKLoaded == 'undefined') {
@@ -88,7 +91,7 @@
               </div>
               <div class="caja">
                 <div class="caja-inner">
-                  <img src="/img/default.png" />
+                  <img src="/img/video.png" />
                   <h3>VÍDEO & FOTOGRAFíA</h3>
                   <p>Muestra a tus futuros clientes los valores de tu peluquería, mostrando una visión más cercana, familiar y profesional. No existe mejor forma de transmitir confianza a tus clientes. Presenta al público el antes y el después del look de tus clientes,para que los usuarios observen el resultado de tus servicios.</p>
                 </div>
@@ -177,6 +180,15 @@
         </div> <!-- #main-container -->
 
 
+        <nav class="goobutt">
+          <input type="checkbox" href="#" class="goobutt-open" name="goobutt-open" id="goobutt-open" />
+          <label class="goobutt-open-button" for="goobutt-open"><i class="fas fa-comments"></i></label>
+          <a class="goobutt-item" href="tel:+3444616039"><i class="fas fa-phone-alt"></i></a>
+          <a class="goobutt-item" onclick="Calendly.showPopupWidget('https://calendly.com/ranking-online/llamada');return false;"><i class="fas fa-calendar-alt"></i> </a>
+          <a class="goobutt-item" href="https://api.whatsapp.com/send?phone=+34644616039"><i class="fab fa-whatsapp"></i></a>
+          <a class="goobutt-item" href="mailto:hola@pelumark.com"><i class="fas fa-envelope"></i></a>
+        </nav>
+          
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

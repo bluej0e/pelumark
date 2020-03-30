@@ -105,33 +105,7 @@ body {
     width: 90%;
     margin: 0 5%;
 }
-/* ==============
-    MOBILE: Menu
-   ============== */
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
 
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: $white;
-    background: #e44d26;
-}
-nav a:hover,
-nav a:visited {
-    color: $white;
-}
-nav a:hover {
-    text-decoration: underline;
-}
 /* ==============
     MOBILE: Main
    ============== */
@@ -415,6 +389,140 @@ header{
     margin-top: 2px; 
 }
 
+/******* GOOMENOO *****/
+
+nav.goobutt{
+    z-index:9999;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin-left: -175px;
+    padding-top: 20px;
+    padding-left: 175px;
+    width: 350px;
+    height: 250px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: left;
+
+    .goobutt {
+    -webkit-filter: url("#shadowed-goo");
+        filter: url("#shadowed-goo");
+    }
+
+    .goobutt-item, .goobutt-open-button {
+    position: absolute;
+    background:$hotpink;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    right: 20px;
+    bottom: 20px;
+    font-size: 36px;
+    color: white!important;
+    text-align: center;
+    line-height: 71px;
+    -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform ease-out 200ms;
+    transition: -webkit-transform ease-out 200ms;
+    transition: transform ease-out 200ms;
+    transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+    }
+
+    .goobutt-open {
+    display: none;
+    }
+
+    .goobutt {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin-left: -175px;
+    padding-top: 20px;
+    padding-left: 175px;
+    width: 350px;
+    height: 250px;
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: left;
+    }
+
+    .goobutt-item:hover {
+    background: $pink;
+    color:white!important;
+    }
+    .goobutt-item:nth-child(3) {
+    -webkit-transition-duration: 70ms;
+        transition-duration: 70ms;
+    }
+    .goobutt-item:nth-child(4) {
+    -webkit-transition-duration: 130ms;
+        transition-duration: 130ms;
+    }
+    .goobutt-item:nth-child(5) {
+    -webkit-transition-duration: 190ms;
+        transition-duration: 190ms;
+    }
+    .goobutt-item:nth-child(6) {
+    -webkit-transition-duration: 250ms;
+        transition-duration: 250ms;
+    }
+
+    .goobutt-open-button {
+    z-index: 2;
+    -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+        transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+    }
+
+    .goobutt-open-button:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+        transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    }
+
+    .goobutt-open:checked + .goobutt-open-button {
+    -webkit-transition-timing-function: linear;
+        transition-timing-function: linear;
+    -webkit-transition-duration: 200ms;
+        transition-duration: 200ms;
+    -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+        transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+    }
+
+    .goobutt-open:checked ~ .goobutt-item {
+    -webkit-transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+        transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+    }
+    .goobutt-open:checked ~ .goobutt-item:nth-child(3) {
+    -webkit-transition-duration: 160ms;
+        transition-duration: 160ms;
+    -webkit-transform: translate3d(-159.64323px, 10.67888px, 0);
+        transform: translate3d(-159.64323px, 10.67888px, 0);
+    }
+    .goobutt-open:checked ~ .goobutt-item:nth-child(4) {
+    -webkit-transition-duration: 240ms;
+        transition-duration: 240ms;
+    -webkit-transform: translate3d(-140.16646px, -77.15804px, 0);
+        transform: translate3d(-140.16646px, -77.15804px, 0);
+    }
+    .goobutt-open:checked ~ .goobutt-item:nth-child(5) {
+    -webkit-transition-duration: 320ms;
+        transition-duration: 320ms;
+    -webkit-transform: translate3d(-76.36932px, -140.59775px, 0);
+        transform: translate3d(-76.36932px, -140.59775px, 0);
+    }
+    .goobutt-open:checked ~ .goobutt-item:nth-child(6) {
+    -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+    -webkit-transform: translate3d(11.57564px, -159.58071px, 0);
+        transform: translate3d(11.57564px, -159.58071px, 0);
+    }
+}
 
 
 /* ==========================================================================
@@ -483,43 +591,14 @@ header{
 
 
 
+
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
    @media only screen and (min-width: 480px) {
 
-    /* ====================
-        INTERMEDIATE: Menu
-       ==================== */
-    
-        nav a {
-            float: left;
-            width: 27%;
-            margin: 0 1.7%;
-            padding: 25px 2%;
-            margin-bottom: 0;
-        }
-    
-        nav li:first-child a {
-            margin-left: 0;
-        }
-    
-        nav li:last-child a {
-            margin-right: 0;
-        }
-    
-    /* ========================
-        INTERMEDIATE: IE Fixes
-       ======================== */
-    
-        nav ul li {
-            display: inline;
-        }
-    
-        .oldie nav a {
-            margin: 0 0.7%;
-        }
     }
     
     @media only screen and (min-width: 768px) {
@@ -543,10 +622,7 @@ header{
             float: left;
         }
     
-        nav {
-            float: right;
-            width: 38%;
-        }
+  
     
     /* ============
         WIDE: Main
