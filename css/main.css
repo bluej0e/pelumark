@@ -377,27 +377,34 @@ header p {
   background-image: url(/img/form_bg.jpg);
   background-position: center bottom;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10vw;
 }
 
 #contact h2 {
   text-align: center;
 }
 
-.mauticform_wrapper {
-  max-width: 600px;
-  margin: 10px auto;
+#contact button {
+  border-radius: 25px;
+  background-color: #E0E5EC;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  padding: 10px 30px;
+  margin: 2em;
+  border: none;
+  color: #F277A8;
+  transition: 0.16s ease-in-out;
 }
 
-.mauticform-name {
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-bottom: 3px;
-}
-
-.mauticform-description {
-  margin-top: 2px;
-  margin-bottom: 10px;
+#contact button:hover {
+  transform: scale(1.2);
+  font-weight: 600;
 }
 
 .mauticform-error {
@@ -440,7 +447,9 @@ header p {
   margin-top: 2px;
 }
 
-.mauticform-selectbox, .mauticform-input, .mauticform-textarea {
+.mauticform-selectbox,
+.mauticform-input,
+.mauticform-textarea {
   width: 100%;
   padding: 0.5em 0.5em;
   border: 1px solid #CCC;
@@ -458,13 +467,15 @@ header p {
   font-weight: normal;
 }
 
-.mauticform-button-wrapper .mauticform-button.btn-default, .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
+.mauticform-button-wrapper .mauticform-button.btn-default,
+.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default {
   color: #5d6c7c;
   background-color: #ffffff;
   border-color: #dddddd;
 }
 
-.mauticform-button-wrapper .mauticform-button, .mauticform-pagebreak-wrapper .mauticform-pagebreak {
+.mauticform-button-wrapper .mauticform-button,
+.mauticform-pagebreak-wrapper .mauticform-pagebreak {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 600;
@@ -484,7 +495,8 @@ header p {
   user-select: none;
 }
 
-.mauticform-button-wrapper .mauticform-button.btn-default[disabled], .mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] {
+.mauticform-button-wrapper .mauticform-button.btn-default[disabled],
+.mauticform-pagebreak-wrapper .mauticform-pagebreak.btn-default[disabled] {
   background-color: #ffffff;
   border-color: #dddddd;
   opacity: 0.75;
