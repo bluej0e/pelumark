@@ -74,7 +74,19 @@ footer{
   width: 100%;
   margin: 0;
   color: $white;
-  padding: 20px 0;
+  padding: 30px 0;
+  text-align: center;
+
+  a{
+      color:$hotpink;
+      font-weight: 600;
+      font-size: 1.1em;
+      text-decoration: none;
+  }
+  a:hover{
+      text-decoration: underline;
+      cursor: pointer;
+  }
 }
 .browserupgrade {
     margin: 0.2em 0;
@@ -400,7 +412,7 @@ header{
     height: 100vh;
     display: flex;
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -408,6 +420,12 @@ header{
 
     h2{
         text-align: center;
+        font-size: 3em;
+        font-weight: 600;
+        clear:both;
+        margin: 30px auto;
+        width: 100%;
+        line-height: 1em;
     }
     button{
         border-radius: 25px;
