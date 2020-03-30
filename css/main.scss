@@ -164,7 +164,7 @@ header{
         width: 80vw;
         max-width: 600px;
         justify-self: flex-start;
-        top: 150px;
+        top: 20vh;
         position: absolute;    
     }
     h1{
@@ -172,6 +172,7 @@ header{
         font-weight: 600;
     }
     p{
+        margin-top: 15vh;
         max-width: 500px;
         font-weight: 200;
         text-align: center;
