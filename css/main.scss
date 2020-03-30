@@ -23,7 +23,10 @@ $hotpink:#F277A8;
 $black:#121212;
 $white:#E0E5EC;
 $morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
-$buttshad:0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+$buttshad:
+0px 3px 5px -1px rgba(0,0,0,0.2), 
+0px 6px 10px 0px rgba(0,0,0,0.14), 
+0px 1px 18px 0px rgba(0,0,0,0.12);
 
 *{
   font: 16px/26px 'Montserrat', sans-serif;
@@ -150,7 +153,7 @@ button:hover{
 }
 header{
     height:100vh;
-    background-image: url(/img/header_bg.jpg);
+    background-image: url(/img/header_bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -179,7 +182,7 @@ header{
     }
 }
 .imagefiller{
-    background-image: url(/img/image_two.jpg);
+    background-image: url(/img/image_two.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;

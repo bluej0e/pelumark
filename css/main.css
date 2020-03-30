@@ -138,7 +138,7 @@ button:hover {
 
 header {
   height: 100vh;
-  background-image: url(/img/header_bg.jpg);
+  background-image: url(/img/header_bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -170,7 +170,7 @@ header p {
 }
 
 .imagefiller {
-  background-image: url(/img/image_two.jpg);
+  background-image: url(/img/image_two.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center right;
