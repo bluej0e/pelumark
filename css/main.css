@@ -273,8 +273,8 @@ header p {
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   text-align: center;
   padding: 5vw;
 }
@@ -289,50 +289,94 @@ header p {
   line-height: 1em;
 }
 
-#contact button {
-  border-radius: 25px;
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-  padding: 10px 30px;
-  margin: 2em;
-  border: none;
-  color: #F277A8;
-  transition: 0.16s ease-in-out;
-}
-
-#contact button:hover {
-  transform: scale(1.2);
-  font-weight: 600;
-}
-
 #contact form {
+  width: 100%;
+  max-width: 1180px;
+}
+
+#contact form .inner-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+#contact form .inner-form div {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+#contact form .inner-form div div {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
 
 #contact form input,
 #contact form textarea {
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-  border-radius: 25px;
-  width: 100%;
-  padding: 0.5em 0.5em;
-  margin: 20px 0;
   border: none;
-  background: #E0E5EC;
-  box-sizing: border-box;
+  border-bottom: 2px solid #F277A8;
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 0 0 8px 4px;
+  margin: 20px auto;
+  background: transparent;
+  font-size: 1.6em;
+  outline: none;
 }
 
-#contact form input::after,
-#contact form textarea::after {
-  content: "";
-  width: 100%;
-  background-color: #222;
-  stroke: 1px solid;
-  height: 1px;
+#contact form input:focus,
+#contact form textarea:focus {
+  color: #F277A8;
+  border-bottom: solid #F277A8 2px;
+}
+
+#contact form input:valid,
+#contact form textarea:valid {
+  border-bottom: solid #F277A8 2px;
+  color: #F277A8;
+}
+
+#contact form input:invalid,
+#contact form textarea:invalid {
+  border-bottom: solid #8e8e8e 2px;
+  color: #8e8e8e;
+}
+
+#contact form #mauticform_pelumark_submit {
+  align-self: flex-end;
+  margin: 30px auto;
+}
+
+#contact form button {
+  border-radius: 50px;
+  background-color: #E0E5EC;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  padding: 20px 60px;
+  margin: 2em;
+  border: none;
+  font-size: 1.7em;
+  color: #F277A8;
+  transition: 0.16s ease-in-out;
+}
+
+#contact form button:hover {
+  transform: scale(1.2);
+  font-weight: 600;
 }
 
 .mauticform-error {
@@ -343,6 +387,24 @@ header p {
 .mauticform-message {
   margin-bottom: 10px;
   color: green;
+}
+
+.mauticform-row {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mauticform-label {
+  font-size: 1.1em;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.mauticform-row.mauticform-required .mauticform-label:after {
+  color: red;
+  content: " *";
+  display: inline;
 }
 
 .mauticform-helpmessage {

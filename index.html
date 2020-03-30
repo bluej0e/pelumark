@@ -13,6 +13,24 @@
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script type="text/javascript">
+          /** This section is only needed once per page if manually copying **/
+          if (typeof MauticSDKLoaded == 'undefined') {
+              var MauticSDKLoaded = true;
+              var head            = document.getElementsByTagName('head')[0];
+              var script          = document.createElement('script');
+              script.type         = 'text/javascript';
+              script.src          = 'https://phpstack-365445-1147909.cloudwaysapps.com/media/js/mautic-form.js';
+              script.onload       = function() {
+                  MauticSDK.onLoad();
+              };
+              head.appendChild(script);
+              var MauticDomain = 'https://phpstack-365445-1147909.cloudwaysapps.com/index.php';
+              var MauticLang   = {
+                  'submittingMessage': "Espere por favor..."
+              }
+          }
+        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -25,7 +43,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
                 <button>Saber Más</button>
             </header>
-            <section class="checkerboard">
+            <section>
               <div class="caja">
                 <div class="caja-inner">
                   <h3>HACEMOS CRECER TÚ NEGOCIO</h3>
@@ -97,52 +115,50 @@
                   <form autocomplete="false" role="form" method="post" action="https://phpstack-365445-1147909.cloudwaysapps.com/index.php/form/submit?formId=4" id="mauticform_pelumark" data-mautic-form="pelumark" enctype="multipart/form-data">
                       <div class="mauticform-error" id="mauticform_pelumark_error"></div>
                       <div class="mauticform-message" id="mauticform_pelumark_message"></div>
-                      <div class="mauticform-innerform">
-              
-                        <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
-              
+                      <div class="inner-form">
+                        <div>
                           <div id="mauticform_pelumark_nombre" data-validate="nombre" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-1 mauticform-required">
                               <!-- <label id="mauticform_label_pelumark_nombre" for="mauticform_input_pelumark_nombre" class="mauticform-label">Nombre</label> -->
-                              <input id="mauticform_input_pelumark_nombre" name="mauticform[nombre]" value="" class="mauticform-input" type="text" placeholder="Nombre">
+                              <input id="mauticform_input_pelumark_nombre" name="mauticform[nombre]" value="" class="mauticform-input" type="text" placeholder="Nombre" required>
                               <span class="mauticform-errormsg" style="display: none;">El nombre es necesario.</span>
                           </div>
               
                           <div id="mauticform_pelumark_apellidos" data-validate="apellidos" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required">
                               <!-- <label id="mauticform_label_pelumark_apellidos" for="mauticform_input_pelumark_apellidos" class="mauticform-label">Apellidos</label> -->
-                              <input id="mauticform_input_pelumark_apellidos" name="mauticform[apellidos]" value="" class="mauticform-input" type="text" placeholder="Apellidos">
+                              <input id="mauticform_input_pelumark_apellidos" name="mauticform[apellidos]" value="" class="mauticform-input" type="text" placeholder="Apellidos" required>
                               <span class="mauticform-errormsg" style="display: none;">El apellido es necesario.</span>
                           </div>
               
                           <div id="mauticform_pelumark_email" data-validate="email" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-3 mauticform-required">
                               <!-- <label id="mauticform_label_pelumark_email" for="mauticform_input_pelumark_email" class="mauticform-label">Email</label> -->
-                              <input id="mauticform_input_pelumark_email" name="mauticform[email]" value="" class="mauticform-input" type="email" placeholder="Email">
+                              <input id="mauticform_input_pelumark_email" name="mauticform[email]" value="" class="mauticform-input" type="email" placeholder="Email" required>
                               <span class="mauticform-errormsg" style="display: none;">El email es necesario.</span>
                           </div>
               
                           <div id="mauticform_pelumark_telefono" data-validate="telefono" data-validation-type="number" class="mauticform-row mauticform-number mauticform-field-4 mauticform-required">
                               <!-- <label id="mauticform_label_pelumark_telefono" for="mauticform_input_pelumark_telefono" class="mauticform-label">Telefono</label> -->
-                              <input id="mauticform_input_pelumark_telefono" name="mauticform[telefono]" value="" class="mauticform-input" type="number" placeholder="Telefono">
+                              <input id="mauticform_input_pelumark_telefono" name="mauticform[telefono]" value="" class="mauticform-input" type="number" placeholder="Telefono" required>
                               <span class="mauticform-errormsg" style="display: none;">El telefono es necesario.</span>
                           </div>
-              
+                        </div>
+                        <div>
                           <div id="mauticform_pelumark_nombre_del_negocio" data-validate="nombre_del_negocio" data-validation-type="text" class="mauticform-row mauticform-text mauticform-field-5 mauticform-required">
                               <!-- <label id="mauticform_label_pelumark_nombre_del_negocio" for="mauticform_input_pelumark_nombre_del_negocio" class="mauticform-label">Nombre del negocio</label> -->
-                              <input id="mauticform_input_pelumark_nombre_del_negocio" name="mauticform[nombre_del_negocio]" value="" class="mauticform-input" type="text" placeholder="Nombre del negocio">
+                              <input id="mauticform_input_pelumark_nombre_del_negocio" name="mauticform[nombre_del_negocio]" value="" class="mauticform-input" type="text" placeholder="Nombre del negocio" required>
                               <span class="mauticform-errormsg" style="display: none;">El nombre de su negocio es necesario.</span>
                           </div>
               
                           <div id="mauticform_pelumark_mensaje" class="mauticform-row mauticform-text mauticform-field-6">
                               <!-- <label id="mauticform_label_pelumark_mensaje" for="mauticform_input_pelumark_mensaje" class="mauticform-label">Mensaje</label> -->
-                              <textarea id="mauticform_input_pelumark_mensaje" name="mauticform[mensaje]" class="mauticform-textarea" placeholder="Dejanos algun mensaje"></textarea>
+                              <textarea id="mauticform_input_pelumark_mensaje" name="mauticform[mensaje]" class="mauticform-textarea" placeholder="Dejanos algun mensaje" required></textarea>
                               <span class="mauticform-errormsg" style="display: none;"></span>
                           </div>
               
                           <div id="mauticform_pelumark_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-7">
-                              <button type="submit" name="mauticform[submit]" id="mauticform_input_pelumark_submit" value="" class="mauticform-button btn btn-default">Submit</button>
+                              <button type="submit" name="mauticform[submit]" id="mauticform_input_pelumark_submit" value="" class="mauticform-button btn btn-default">Enviar</button>
                           </div>
-                          </div>
+                        </div>
                       </div>
-              
                       <input type="hidden" name="mauticform[formId]" id="mauticform_pelumark_id" value="4">
                       <input type="hidden" name="mauticform[return]" id="mauticform_pelumark_return" value="">
                       <input type="hidden" name="mauticform[formName]" id="mauticform_pelumark_name" value="pelumark">
@@ -176,24 +192,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
-        <script type="text/javascript">
-          /** This section is only needed once per page if manually copying **/
-          if (typeof MauticSDKLoaded == 'undefined') {
-              var MauticSDKLoaded = true;
-              var head            = document.getElementsByTagName('head')[0];
-              var script          = document.createElement('script');
-              script.type         = 'text/javascript';
-              script.src          = 'https://phpstack-365445-1147909.cloudwaysapps.com/index.php/media/js/mautic-form.js';
-              script.onload       = function() {
-                  MauticSDK.onLoad();
-              };
-              head.appendChild(script);
-              var MauticDomain = 'https://phpstack-365445-1147909.cloudwaysapps.com/index.php';
-              var MauticLang   = {
-                  'submittingMessage': "Espere por favor..."
-              }
-          }
-        </script>
+
 
     </body>
 </html>
