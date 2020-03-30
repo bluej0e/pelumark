@@ -245,7 +245,7 @@ header p {
 
 /* MAUTIC FORM STYLE */
 #contact {
-  background-image: url(/img/form_bg.jpg);
+  background-image: url(/img/form_bg.webp);
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
