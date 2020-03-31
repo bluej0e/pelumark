@@ -182,7 +182,7 @@ header p {
   align-items: center;
   text-align: center;
   width: 100%;
-  background-color: #E0E5EC;
+  background-color: #f1f1f1;
 }
 
 .caja:before {
@@ -209,7 +209,7 @@ header p {
 
 .caja-inner h3 {
   font-size: 2em;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -230,7 +230,7 @@ header p {
     background-color: #F7CDDA;
   }
   .caja:nth-child(2), .caja:nth-child(3), .caja:nth-child(6), .caja:nth-child(7), .caja:nth-child(10) {
-    background-color: #E0E5EC;
+    background-color: #f1f1f1;
   }
   .caja p {
     margin: 0 3vw;

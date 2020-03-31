@@ -22,6 +22,7 @@ $darkgray: #8e8e8e;
 $hotpink:#F277A8;
 $black:#121212;
 $white:#E0E5EC;
+$whiteback: #f1f1f1;
 $morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
 $buttshad:
 0px 3px 5px -1px rgba(0,0,0,0.2), 
@@ -181,6 +182,7 @@ header{
         text-align: center;
     }
 }
+
 .imagefiller{
     // background-image: url(/img/image_two.jpg);
     background-size: cover;
@@ -196,7 +198,7 @@ header{
     align-items: center;
     text-align: center;
     width: 100%;
-    background-color: $white;
+    background-color: $whiteback;
 
     &:before {
         content: "";
@@ -221,7 +223,7 @@ header{
         }
         h3{
             font-size: 2em;
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
         }  
         p{
@@ -240,7 +242,7 @@ header{
             background-color: $pink;
         }
         &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7), &:nth-child(10){
-            background-color: $white;
+            background-color: $whiteback;
         }
         p{
             margin:0 3vw;
