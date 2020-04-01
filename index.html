@@ -12,27 +12,19 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script> -->
         <!-- <script src="/js/safe-defer.min.js"></script> -->
-        <script src="/js/lazysizes.min.js" async=""></script>
-         <script type="text/javascript">
+        <script src="/js/vendor/lazysizes.min.js" async=""></script>
+        <script type="text/javascript">
           document.addEventListener('lazybeforeunveil', function(e){
             var bg = e.target.getAttribute('data-bg');
-            if(bg){
+              if(bg){
                 e.target.style.backgroundImage = 'url(' + bg + ')';
-            }
-        });
-
-        // $(document).on('lazybeforeunveil', function(){
-        //   var ajax = $(e.target).data('ajax');
-        //     if(ajax){
-        //         $(e.target).load(ajax);
-        //     }
-        // });
-          </script> 
-
+              }
+          });
+        </script> 
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -178,7 +170,6 @@
             </footer>
         </div> <!-- #main-container -->
 
-
         <nav class="goobutt">
           <input type="checkbox" href="#" class="goobutt-open" name="goobutt-open" id="goobutt-open" />
           <label class="goobutt-open-button" for="goobutt-open"><i class="fas fa-comments"></i></label>
@@ -187,7 +178,6 @@
           <a class="goobutt-item" href="https://api.whatsapp.com/send?phone=+34644616039"><i class="fab fa-whatsapp"></i></a>
           <a class="goobutt-item" href="mailto:hola@pelumark.com"><i class="fas fa-envelope"></i></a>
         </nav>
-
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" defer></script>
         <script src="https://kit.fontawesome.com/4b977b2858.js" crossorigin="anonymous"></script>
