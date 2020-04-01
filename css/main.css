@@ -396,6 +396,17 @@ header p {
   margin-top: 2px;
 }
 
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
 /******* GOOMENOO *****/
 nav.goobutt {
   z-index: 9999;
