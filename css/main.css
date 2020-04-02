@@ -188,7 +188,7 @@ header p {
 .caja:before {
   content: "";
   display: block;
-  padding-bottom: 100%;
+  padding-bottom: calc(100vw * 1.618);
 }
 
 .caja-inner {
@@ -235,6 +235,9 @@ header p {
   .caja p {
     margin: 0 3vw;
   }
+  .caja:before {
+    padding-bottom: 100%;
+  }
 }
 
 .textbox {
@@ -242,7 +245,7 @@ header p {
 }
 
 /* MAUTIC FORM STYLE */
-#contact {
+#contacto {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -256,7 +259,7 @@ header p {
   padding: 5vw;
 }
 
-#contact h2 {
+#contacto h2 {
   text-align: center;
   font-size: 2.5em;
   font-weight: 600;
@@ -266,12 +269,12 @@ header p {
   line-height: 1em;
 }
 
-#contact form {
+#contacto form {
   width: 100%;
   max-width: 1180px;
 }
 
-#contact form .inner-form {
+#contacto form .inner-form {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -281,7 +284,7 @@ header p {
   text-align: center;
 }
 
-#contact form .inner-form div {
+#contacto form .inner-form div {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -291,7 +294,7 @@ header p {
   text-align: center;
 }
 
-#contact form .inner-form div div {
+#contacto form .inner-form div div {
   width: 100%;
   max-width: 500px;
   display: flex;
@@ -302,8 +305,8 @@ header p {
   text-align: center;
 }
 
-#contact form input,
-#contact form textarea {
+#contacto form input,
+#contacto form textarea {
   border: none;
   border-bottom: 2px solid #F277A8;
   width: 100%;
@@ -316,30 +319,30 @@ header p {
   outline: none;
 }
 
-#contact form input:focus,
-#contact form textarea:focus {
+#contacto form input:focus,
+#contacto form textarea:focus {
   color: #F277A8;
   border-bottom: solid #F277A8 2px;
 }
 
-#contact form input:valid,
-#contact form textarea:valid {
+#contacto form input:valid,
+#contacto form textarea:valid {
   border-bottom: solid #F277A8 2px;
   color: #F277A8;
 }
 
-#contact form input:invalid,
-#contact form textarea:invalid {
+#contacto form input:invalid,
+#contacto form textarea:invalid {
   border-bottom: solid #8e8e8e 2px;
   color: #8e8e8e;
 }
 
-#contact form #mauticform_pelumark_submit {
+#contacto form #mauticform_pelumark_submit {
   align-self: flex-end;
   margin: 30px auto;
 }
 
-#contact form button {
+#contacto form button {
   border-radius: 50px;
   background-color: #E0E5EC;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -351,7 +354,7 @@ header p {
   transition: 0.16s ease-in-out;
 }
 
-#contact form button:hover {
+#contacto form button:hover {
   transform: scale(1.2);
   font-weight: 600;
 }
@@ -430,6 +433,9 @@ nav.goobutt .goobutt {
 
 nav.goobutt .goobutt-item, nav.goobutt .goobutt-open-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #F277A8;
   border-radius: 100%;
   width: 70px;
@@ -548,6 +554,100 @@ nav.goobutt .goobutt-open:checked ~ .goobutt-item:nth-child(6) {
   transition-duration: 400ms;
   -webkit-transform: translate3d(11.57564px, -159.58071px, 0);
   transform: translate3d(11.57564px, -159.58071px, 0);
+}
+
+#popup {
+  display: none;
+  z-index: 9;
+}
+
+.popup__wrapper {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.popup__wrapper .popup__container {
+  background: url(/img/hex.svg) no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*overflow: visible;*/
+  font-size: 18px;
+  margin: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  max-width: 440px;
+  max-height: 500px;
+  text-align: center;
+}
+
+.popup__wrapper p {
+  font-weight: 600;
+}
+
+.popup__wrapper .h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.popup__wrapper button[type="discount"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 244px;
+  width: 50%;
+  height: 50px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  background-color: #6E0270;
+  border-radius: 25px;
+  transition: all .26s ease;
+  font-weight: 600;
+}
+
+.popup__wrapper .popup__container:hover button[type="discount"] {
+  bottom: 0;
+  background-color: #D80077;
+  animation: none;
+  animation: pulse 1s infinite;
+  font-weight: 800;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.35);
+}
+
+.popup__wrapper:hover .st0 {
+  stroke: #6E0270;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup__wrapper i {
+  position: relative;
+  top: -100px;
+  right: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 /* ==========================================================================

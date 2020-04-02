@@ -28,6 +28,7 @@ $buttshad:
 0px 3px 5px -1px rgba(0,0,0,0.2), 
 0px 6px 10px 0px rgba(0,0,0,0.14), 
 0px 1px 18px 0px rgba(0,0,0,0.12);
+$phi: 1.618;
 
 *{
   font: 16px/26px 'Montserrat', sans-serif;
@@ -203,7 +204,7 @@ header{
     &:before {
         content: "";
         display: block;
-        padding-bottom: 100%;
+        padding-bottom: calc(100vw * #{$phi});
     }
     &-inner{
         position: absolute;
@@ -243,6 +244,9 @@ header{
         p{
             margin:0 3vw;
         }
+        &:before {
+            padding-bottom: 100%;
+        }
     }
 }
 
@@ -251,7 +255,7 @@ header{
 }
 
 /* MAUTIC FORM STYLE */
-#contact{
+#contacto{
     // background-image: url(/img/form_bg.jpg);
     background-position: center bottom;
     background-size: cover;
@@ -312,7 +316,6 @@ header{
             }
         }
 
-
         input, 
         textarea{
             border: none; 
@@ -341,6 +344,7 @@ header{
                 color:$darkgray;
             }
         }
+
         #mauticform_pelumark_submit{
             align-self: flex-end;
             margin:30px auto;
@@ -431,6 +435,9 @@ nav.goobutt{
 
     .goobutt-item, .goobutt-open-button {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background:$hotpink;
     border-radius: 100%;
     width: 70px;
@@ -544,6 +551,102 @@ nav.goobutt{
         transform: translate3d(11.57564px, -159.58071px, 0);
     }
 }
+
+
+#popup {
+    display: none;
+    z-index:9;
+}
+.popup__wrapper {
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    
+    .popup__container {
+        background: url(/img/hex.svg) no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /*overflow: visible;*/
+        font-size: 18px;
+        margin: 20px;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        max-width: 440px;
+        max-height: 500px;
+        text-align: center;
+    }
+    p{
+        font-weight: 600;
+    }
+    .h1{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    button[type="discount"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 244px;
+        width: 50%;
+        height: 50px;
+        font-family: Raleway, sans-serif;
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.2;
+        background-color: #6E0270;
+        border-radius: 25px;
+        transition: all .26s ease;
+        // animation: wiggle 800ms infinite linear;
+        font-weight: 600;
+    }
+
+    .popup__container:hover button[type="discount"] {
+        bottom: 0;
+        background-color: #D80077;
+        animation: none;
+        animation: pulse 1s infinite;
+        font-weight: 800;
+        box-shadow: 0 10px 15px 0 rgba(0,0,0,0.35);
+    } 
+
+    &:hover .st0{
+        stroke:#6E0270;
+    }
+
+    // @keyframes wiggle {
+    //     0% {transform: rotate(1deg);}
+    //     25% {transform: rotate(-1deg);}
+    //     50% {transform: rotate(2deg);}
+    //     75% {transform: rotate(-1deg);}
+    //     100% {transform: rotate(0deg);}
+    // }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1);}
+        100% { transform: scale(1); }
+    }
+
+    i{
+        position: relative;
+        top: -100px;
+        right: 0;
+        left: 0;
+        cursor: pointer;
+    }
+}
+
 
 
 /* ==========================================================================
