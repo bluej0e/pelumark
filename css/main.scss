@@ -309,7 +309,7 @@ header{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: flex-start;
-        padding: 50px 0;
+        // padding: 50px 0;
 
         div{
             width: 100%;
@@ -335,12 +335,6 @@ header{
         flex-direction: row;
         justify-content: space-around;
         align-content: space-evenly;
-
-        div{
-            // // flex-direction: row;
-            // justify-content: flex-start;
-            // align-items: center;
-        }
 
         #three{
             flex-direction: row;
