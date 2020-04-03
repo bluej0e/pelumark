@@ -217,7 +217,6 @@ header{
         img{
             height: 50%;
             width: auto;
-            border-radius: 25px;
         }
         h3{
             font-size: 2em;
@@ -253,6 +252,107 @@ header{
 .textbox{
     padding: 1em;
 }
+
+#boxoutline{
+}
+
+#about{
+    background-color:$black;
+    color:$white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 0;
+
+    h3{
+        font-size: 2em;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 10;
+        line-height: 1.2em;
+
+        &:after{
+            content: "?";
+            position: absolute;
+            color: $hotpink;
+            font-weight: 900;
+            z-index: -1;
+            font-size: 2em;
+            transform: translate(-25px, 0px);
+        }
+        &:before{
+            content: "¿";
+            position: absolute;
+            color: $hotpink;
+            font-weight: 900;
+            z-index: -1;
+            font-size: 2em;
+            transform: translate(-15px, -7px);
+        }
+    }  
+
+    p{
+        margin:0 5vw;
+        line-height:22px;
+    } 
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #three{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding: 50px 0;
+
+        div{
+            width: 100%;
+            margin: 20px 0;
+
+            h4{
+                font-size: 2em;
+                line-height: 1.1em;
+                font-weight: 600;
+                text-transform: uppercase;
+                text-align: center;
+                color: $hotpink;
+            }  
+            p{
+                margin:0 2.5vw;
+                line-height:22px;
+            } 
+        }
+    }
+
+    @include desktop{
+        min-height: calc(50vw - 160px);
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: space-evenly;
+
+        div{
+            // // flex-direction: row;
+            // justify-content: flex-start;
+            // align-items: center;
+        }
+
+        #three{
+            flex-direction: row;
+            padding: 0;
+
+            div{
+                width: 30vw;
+            }
+        }
+    }
+}
+
 
 /* MAUTIC FORM STYLE */
 #contacto{

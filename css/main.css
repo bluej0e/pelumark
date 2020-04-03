@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 /* VARIABLES */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap");
@@ -204,7 +205,6 @@ header p {
 .caja-inner img {
   height: 50%;
   width: auto;
-  border-radius: 25px;
 }
 
 .caja-inner h3 {
@@ -242,6 +242,99 @@ header p {
 
 .textbox {
   padding: 1em;
+}
+
+#about {
+  background-color: #121212;
+  color: #E0E5EC;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  padding: 80px 0;
+}
+
+#about h3 {
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 10;
+  line-height: 1.2em;
+}
+
+#about h3:after {
+  content: "?";
+  position: absolute;
+  color: #F277A8;
+  font-weight: 900;
+  z-index: -1;
+  font-size: 2em;
+  transform: translate(-25px, 0px);
+}
+
+#about h3:before {
+  content: "¿";
+  position: absolute;
+  color: #F277A8;
+  font-weight: 900;
+  z-index: -1;
+  font-size: 2em;
+  transform: translate(-15px, -7px);
+}
+
+#about p {
+  margin: 0 5vw;
+  line-height: 22px;
+}
+
+#about div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#about #three {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 50px 0;
+}
+
+#about #three div {
+  width: 100%;
+  margin: 20px 0;
+}
+
+#about #three div h4 {
+  font-size: 2em;
+  line-height: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  color: #F277A8;
+}
+
+#about #three div p {
+  margin: 0 2.5vw;
+  line-height: 22px;
+}
+
+@media (min-width: 840px) {
+  #about {
+    min-height: calc(50vw - 160px);
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-evenly;
+  }
+  #about #three {
+    flex-direction: row;
+    padding: 0;
+  }
+  #about #three div {
+    width: 30vw;
+  }
 }
 
 /* MAUTIC FORM STYLE */
