@@ -190,14 +190,14 @@
           <a class="goobutt-item" href="mailto:hola@pelumark.com"><i class="fas fa-envelope"></i></a>
         </nav>
 
-        <div id="popup" class="popup__wrapper">
+        <!-- <div id="popup" class="popup__wrapper">
           <div class="popup__container">
             <i class="fas fa-times" id="close" ></i>
             <h1>¡No pierdas esta oportunidad!</h1>
             <p>¡Aumenta tus clientes por 99€!</p>
             <button id="popup__btn" type="discount" href="#contacto">CONTÁCTANOS</button>
           </div>
-        </div>
+        </div> -->
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" defer></script>
         <script src="https://kit.fontawesome.com/4b977b2858.js" crossorigin="anonymous"></script>
@@ -224,36 +224,7 @@
           }
         </script>
 
-        <script>
-          function onMouseOut(event) {
-            if (
-                event.clientY < 50 &&
-                event.relatedTarget == null &&
-                event.target.nodeName.toLowerCase() !== 'select') {
-                    document.removeEventListener("mouseout", onMouseOut);
-                    document.getElementById("popup").style.display = "flex";
-                }
-              }
-
-              document.addEventListener("mouseout", onMouseOut);
-
-              var modal = document.getElementById('popup');
-              var close = document.getElementById("close");
-              var boton = document.getElementById("popup__btn");
-
-              close.onclick = function() {
-                  modal.style.display = "none";
-              }
-              boton.onclick = function() {
-                  modal.style.display = "none";
-                  window.location.href='#contacto';
-              }
-              window.onclick = function(event) {
-                  if (event.target === modal) {
-                      modal.style.display = "none";
-                  }
-              }
-        </script>
+  
 
         <!-- Google Analytics -->
         <script>

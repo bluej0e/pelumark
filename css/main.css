@@ -556,6 +556,9 @@ nav.goobutt .goobutt-open:checked ~ .goobutt-item:nth-child(6) {
   transform: translate3d(11.57564px, -159.58071px, 0);
 }
 
+/* ==========================================================================
+    Popup styles start 
+    ========================================================================= */
 #popup {
   display: none;
   z-index: 9;
@@ -579,7 +582,6 @@ nav.goobutt .goobutt-open:checked ~ .goobutt-item:nth-child(6) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*overflow: visible;*/
   font-size: 18px;
   margin: 20px;
   width: 100%;
