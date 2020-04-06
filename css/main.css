@@ -269,7 +269,7 @@ header p {
   font-weight: 900;
   z-index: -1;
   font-size: 2em;
-  transform: translate(-25px, 0px);
+  transform: translate(-11px, -4px);
 }
 
 #about h3:before {
@@ -279,7 +279,7 @@ header p {
   font-weight: 900;
   z-index: -1;
   font-size: 2em;
-  transform: translate(-15px, -7px);
+  transform: translate(-27px, -7px);
 }
 
 #about p {
