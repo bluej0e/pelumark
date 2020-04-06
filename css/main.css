@@ -121,17 +121,6 @@ section {
   flex-wrap: wrap;
 }
 
-button {
-  border-radius: 25px;
-  background-color: #E0E5EC;
-  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-  padding: 10px 30px;
-  margin: 2em;
-  border: none;
-  color: #F277A8;
-  transition: 0.16s ease-in-out;
-}
-
 button:hover {
   transform: scale(1.2);
   font-weight: 600;
@@ -147,6 +136,18 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 15%;
+}
+
+header a {
+  border-radius: 25px;
+  background-color: #E0E5EC;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  padding: 10px 30px;
+  margin: 2em;
+  border: none;
+  color: #F277A8;
+  transition: 0.16s ease-in-out;
+  text-decoration: none;
 }
 
 header img {
@@ -269,7 +270,7 @@ header p {
   font-weight: 900;
   z-index: -1;
   font-size: 2em;
-  transform: translate(-11px, -4px);
+  transform: translate(-4px, -8px);
 }
 
 #about h3:before {
@@ -279,7 +280,7 @@ header p {
   font-weight: 900;
   z-index: -1;
   font-size: 2em;
-  transform: translate(-27px, -7px);
+  transform: translate(-34px, -4px);
 }
 
 #about p {
