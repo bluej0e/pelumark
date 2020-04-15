@@ -25,8 +25,8 @@ $white:#E0E5EC;
 $whiteback: #f1f1f1;
 $morphshad: 9px 9px 16px rgba(163,177,198,0.6),-9px -9px 16px rgba(255,255,255,0.5);
 $buttshad:
-0px 3px 5px -1px rgba(0,0,0,0.2), 
-0px 6px 10px 0px rgba(0,0,0,0.14), 
+0px 3px 5px -1px rgba(0,0,0,0.2),
+0px 6px 10px 0px rgba(0,0,0,0.14),
 0px 1px 18px 0px rgba(0,0,0,0.12);
 $phi: 1.618;
 
@@ -38,6 +38,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -155,7 +156,7 @@ header{
     justify-content: center;
     align-items: center;
     padding:0 15%;
-    
+
     a{
         border-radius: 25px;
         background-color: $white;
@@ -173,7 +174,7 @@ header{
         max-width: 600px;
         justify-self: flex-start;
         top: 20vh;
-        position: absolute;    
+        position: absolute;
     }
     h1{
         font-size: 3em;
@@ -225,11 +226,11 @@ header{
             font-size: 2em;
             font-weight: 600;
             text-transform: uppercase;
-        }  
+        }
         p{
             margin:0 5vw;
             line-height:22px;
-        }    
+        }
     }
     &:nth-child(odd){
         background-color:$pink;
@@ -293,12 +294,12 @@ header{
             font-size: 2em;
             transform: translate(-34px, -4px);
         }
-    }  
+    }
 
     p{
         margin:0 5vw;
         line-height:22px;
-    } 
+    }
 
     div{
         display: flex;
@@ -325,11 +326,11 @@ header{
                 text-transform: uppercase;
                 text-align: center;
                 color: $hotpink;
-            }  
+            }
             p{
                 margin:0 2.5vw;
                 line-height:22px;
-            } 
+            }
         }
     }
 
@@ -376,7 +377,7 @@ header{
         width: 100%;
         line-height: 1em;
     }
- 
+
 
     form{
         width: 100%;
@@ -401,8 +402,8 @@ header{
                 text-align: center;
 
                 div{
-                    width:100%; 
-                    max-width: 500px;           
+                    width:100%;
+                    max-width: 500px;
                     display: flex;
                     flex-direction: column;
                     flex-wrap: wrap;
@@ -413,31 +414,31 @@ header{
             }
         }
 
-        input, 
+        input,
         textarea{
-            border: none; 
+            border: none;
             border-bottom: 2px solid $hotpink;
-            width: 100%; 
+            width: 100%;
             max-width: 500px;
             min-width: 300px;
             padding: 0 0 8px 4px;
             margin: 30px auto;
-            background: transparent; 
+            background: transparent;
             font-size: 1.6em;
             outline: none;
 
             &:focus{
                 color:$hotpink;
-                border-bottom: solid $hotpink 2px; 
+                border-bottom: solid $hotpink 2px;
             }
 
-            &:valid { 
-                border-bottom: solid $hotpink 2px; 
+            &:valid {
+                border-bottom: solid $hotpink 2px;
                 color:$hotpink;
             }
 
-            &:invalid { 
-                border-bottom: solid $darkgray 2px; 
+            &:invalid {
+                border-bottom: solid $darkgray 2px;
                 color:$darkgray;
             }
         }
@@ -446,7 +447,7 @@ header{
             align-self: flex-end;
             margin:30px auto;
         }
-        
+
         button{
             border-radius: 50px;
             background-color: $white;
@@ -465,38 +466,38 @@ header{
     }
 }
 
-.mauticform-error { 
-    margin-bottom: 10px; 
-    color: red; 
-}
-.mauticform-message { 
+.mauticform-error {
     margin-bottom: 10px;
-    color: green; 
+    color: red;
 }
-.mauticform-row { 
-    display: block; 
-    margin-bottom: 20px; 
+.mauticform-message {
+    margin-bottom: 10px;
+    color: green;
 }
-.mauticform-label { 
-    font-size: 1.1em; 
-    display: block; 
-    font-weight: bold; 
-    margin-bottom: 5px; 
+.mauticform-row {
+    display: block;
+    margin-bottom: 20px;
 }
-.mauticform-row.mauticform-required .mauticform-label:after { 
-    color: red; 
-    content: " *"; 
-    display: inline; 
+.mauticform-label {
+    font-size: 1.1em;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
-.mauticform-helpmessage { 
-    display: block; 
-    font-size: 0.9em; 
-    margin-bottom: 3px; 
+.mauticform-row.mauticform-required .mauticform-label:after {
+    color: red;
+    content: " *";
+    display: inline;
 }
-.mauticform-errormsg { 
-    display: block; 
-    color: red; 
-    margin-top: 2px; 
+.mauticform-helpmessage {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+.mauticform-errormsg {
+    display: block;
+    color: red;
+    margin-top: 2px;
 }
 
 /* fade image in after load */
@@ -649,7 +650,7 @@ nav.goobutt{
     }
 }
 /* ==========================================================================
-    Popup styles start 
+    Popup styles start
     ========================================================================= */
 
 
@@ -667,7 +668,7 @@ nav.goobutt{
     bottom: 0;
     right: 0;
     z-index: 10;
-    
+
     .popup__container {
         background: url(/img/hex.svg) no-repeat;
         display: flex;
@@ -717,7 +718,7 @@ nav.goobutt{
         animation: pulse 1s infinite;
         font-weight: 800;
         box-shadow: 0 10px 15px 0 rgba(0,0,0,0.35);
-    } 
+    }
 
     &:hover .st0{
         stroke:#6E0270;
@@ -823,61 +824,61 @@ nav.goobutt{
    @media only screen and (min-width: 480px) {
 
     }
-    
+
     @media only screen and (min-width: 768px) {
-    
+
     /* ====================
         WIDE: CSS3 Effects
        ==================== */
-    
+
         .header-container,
         .main aside {
             -webkit-box-shadow: 0 5px 10px #aaa;
                -moz-box-shadow: 0 5px 10px #aaa;
                     box-shadow: 0 5px 10px #aaa;
         }
-    
+
     /* ============
         WIDE: Menu
        ============ */
-    
+
         .title {
             float: left;
         }
-    
-  
-    
+
+
+
     /* ============
         WIDE: Main
        ============ */
-    
+
         .main article {
             float: left;
             width: 57%;
         }
-    
+
         .main aside {
             float: right;
             width: 28%;
         }
     }
-    
+
     @media only screen and (min-width: 1140px) {
-    
+
     /* ===============
         Maximal Width
        =============== */
-    
+
         .wrapper {
             width: 1026px; /* 1140px - 10% for margins */
             margin: 0 auto;
         }
     }
-    
+
     /* ==========================================================================
        Helper classes
        ========================================================================== */
-    
+
     .hidden {
         display: none !important;
         visibility: hidden;
@@ -915,5 +916,3 @@ nav.goobutt{
     .clearfix {
         *zoom: 1;
     }
-    
-    
