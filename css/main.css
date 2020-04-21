@@ -155,8 +155,7 @@ header img {
   width: 80vw;
   max-width: 500px;
   justify-self: flex-start;
-  top: 15vh;
-  position: absolute;
+  top: 10vh;
 }
 
 header h1 {
@@ -165,7 +164,7 @@ header h1 {
 }
 
 header p {
-  margin-top: 15vh;
+  margin-top: 5vh;
   max-width: 500px;
   font-weight: 200;
   text-align: center;
