@@ -10,6 +10,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 ::-moz-selection {
@@ -152,9 +153,9 @@ header a {
 
 header img {
   width: 80vw;
-  max-width: 600px;
+  max-width: 500px;
   justify-self: flex-start;
-  top: 20vh;
+  top: 15vh;
   position: absolute;
 }
 
@@ -650,7 +651,7 @@ nav.goobutt .goobutt-open:checked ~ .goobutt-item:nth-child(6) {
 }
 
 /* ==========================================================================
-    Popup styles start 
+    Popup styles start
     ========================================================================= */
 #popup {
   display: none;
