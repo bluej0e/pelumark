@@ -144,7 +144,7 @@ header a {
   background-color: #E0E5EC;
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
   padding: 10px 30px;
-  margin: 2vh;
+  margin: 5vh 0;
   border: none;
   color: #F277A8;
   transition: 0.16s ease-in-out;
@@ -162,7 +162,7 @@ header h1 {
 }
 
 header p {
-  margin: 0 5vh;
+  margin: 5vh 0;
   max-width: 500px;
   font-weight: 200;
   text-align: center;
