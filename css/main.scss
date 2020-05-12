@@ -153,9 +153,9 @@ header{
     background-position: center bottom;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding:0 15%;
+    padding:5vh 10vw 0;
 
     a{
         border-radius: 25px;
