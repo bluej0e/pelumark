@@ -162,7 +162,7 @@ header{
         background-color: $white;
         box-shadow: $morphshad;
         padding: 10px 30px;
-        margin: 2em;
+        margin: 2vh;
         border: none;
         color: $hotpink;
         transition: 0.16s ease-in-out;
@@ -172,8 +172,8 @@ header{
     img{
         width: 80vw;
         max-width: 500px;
-        justify-self: flex-start;
-        top: 10vh;
+        // justify-self: flex-start;
+        // top: 10vh;
         // position: absolute;
     }
     h1{
@@ -181,7 +181,7 @@ header{
         font-weight: 600;
     }
     p{
-        margin-top: 5vh;
+        margin:0 5vh;
         max-width: 500px;
         font-weight: 200;
         text-align: center;
